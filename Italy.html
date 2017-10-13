@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="globe.png" />
+	  <link rel="stylesheet"
+<link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Lobster">
+         <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+<style>
+p {
+font-family: 'Dosis', serif;
+        font-size: 15px;
+        }
+h1 {
+font-family: 'Lobster', serif;
+        font-size: 45px;
+        }
+h4 {
+font-family: 'Lobster', serif;
+        font-size: 32px;
+        }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #929ea0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right:1px solid #e6c6ff;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) { 
+    background-color: #e6c6ff;
+}
+.active {
+	background-color: #B0E0E6
+</style>
+</head>
+<body>
+
+<ul>
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Korea.html">Korea</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a class="active" href="#Italy">Italy</a></li>
+  <li><a href="Africa.html">Africa</a></li>
+</ul>
+<div style="padding:20px;margin-top:30px;background-color:#FFFAF0;">
+<h1>Italy</h1>
+<div id="googleMap" style="width:100%;height:500px;"></div>
+<p>(Colosseum)</p>
+<h2>Description</h2>
+<p>The myth that Italy was built upon was that, two brothers named Romulus and Remus who are descendants of Aeneas founded Rome (the capital) on April 21 753 BC.</p>
+<div id="googleMap2" style="width:100%;height:500px;"></div>
+<h2> Reasons why I want to go to Italy</h2>
+<p> Italy has many different landmarks, one of the most popular being the Colosseum!</p>
+<p>It can seat between 50,000-80,000 people, where they would have gladiator contests and more in the realm of that. </p>
+<p>I find it interesting to go to a place that was made in 70 AD and to find out how/why it became so popular.</p>
+<script>
+function myMap() {
+var mapCenter = new google.maps.LatLng(41.8902,12.4922);
+var mapProp= {center:mapCenter,zoom:15};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var Italy =new google.maps.LatLng(41.8902,12.4922);
+var ItalyMarker= new google.maps.Marker({position: Italy});
+ItalyMarker.setMap(map);
+
+var mapCenter2 = new google.maps.LatLng(41.8902,12.4922);
+var mapProp2= {center:mapCenter2,zoom:5};
+var map2=new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+
+var Italy2 =new google.maps.LatLng(41.8902,12.4922);
+var Italy2Marker= new google.maps.Marker({position: Italy2});
+map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+Italy2Marker.setMap(map2);
+var infowindow = new google.maps.InfoWindow({
+  content:"Colosseum!"
+  });
+infowindow.open(googleMap,ItalyMarker);
+
+var marker=new google.maps.Marker({
+  position:Italy2,
+  icon:'italyflag.png'
+  });
+
+marker.setMap(map2);
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEZvZhIKGAkiFtJFFd1fJw3iCKMCEu1s&callback=myMap"></script>
+
+<img src="colosseum.jpg" height="300"/>
+<p>https://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg</p>
+<p>https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiMt4_c7-3WAhXKhVQKHWYpAhkQjBwIBA&url=http%3A%2F%2Fwww.freeflagicons.com%2Fdownload%2F%3Ftexture%3D1%26country%3Ditaly&psig=AOvVaw3bWIB1VATybCHRU2BcsqPf&ust=1507993496262246</p>
+<p>https://img.clipartxtras.com/c7a15886667f3f4727068057ae3d3dd8_png-globe-clipart-transparent-background_2070-2062.png</p>
+
+

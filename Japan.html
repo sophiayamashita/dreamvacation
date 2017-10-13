@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="globe.png" />
+	  <link rel="stylesheet"
+       <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Lobster">
+         <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+<style>
+p {
+font-family: 'Dosis', serif;
+        font-size: 15px;
+        }
+h1 {
+font-family: 'Lobster', serif;
+        font-size: 45px;
+        }
+h4 {
+font-family: 'Lobster', serif;
+        font-size: 32px;
+        }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #929ea0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right:1px solid #e6c6ff;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) { 
+    background-color: #e6c6ff;
+}
+.active {
+	background-color: #B0E0E6
+</style>
+</head>
+<body>
+
+<ul>
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Korea.html">Korea</a></li>
+  <li><a class="active" href="#Japan">Japan</a></li>
+  <li><a href="Italy.html">Italy</a></li>
+  <li><a href="Africa.html">Africa</a></li>
+</ul>
+<div style="padding:20px;margin-top:30px;background-color:#FFFAF0;">
+<h1> Japan</h1>
+<div id="googleMap2" style="width:100%;height:500px;"></div>
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+
+<script>
+function myMap() {
+var mapCenter = new google.maps.LatLng(34.6873153,135.5233246);
+var mapProp= {center:mapCenter,zoom:15};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var Japan =new google.maps.LatLng(34.6873153,135.5240126);
+var JapanMarker= new google.maps.Marker({position: Japan});
+JapanMarker.setMap(map);
+
+//osaka castle
+var mapCenter2 = new google.maps.LatLng(35.7444164,134.3823246);
+var mapProp2= {center:mapCenter2,zoom:5};
+var map2=new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+
+var Japan2 =new google.maps.LatLng(35.6444164,139.6923246);
+var Japan2Marker= new google.maps.Marker({position: Japan2});
+map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+Japan2Marker.setMap(map2);
+var infowindow = new google.maps.InfoWindow({
+  content:"Osaka Castle!"
+  });
+infowindow.open(googleMap,JapanMarker);
+
+var marker=new google.maps.Marker({
+  position:Japan2,
+  icon:'japanflag.png'
+  });
+
+marker.setMap(map2);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEZvZhIKGAkiFtJFFd1fJw3iCKMCEu1s&callback=myMap"></script>
+<p>Above is Osaka, that has one of Japan's most famous landmark, the Osaka Castle.</p>
+<h2>Description</h2>
+<p>Japan is 145,932 mi² large consisting of different islands. There are many mountain ranges that actually cover 73% of Japan.</p>
+<p> That's what make sit so intriguing. To know that if you go you might be able to climb one of their mountains, if you are in the right condition to do so.</p>
+<h2> Reasons why I want to go to Japan</h2>
+<p>They have many mountain ranges one of the most famous being Mount Fuji. It is 12,288 feet tall or 3,776  meters. 
+<p>They also have really cool street food. It's really innovative in the shapes and concepts of each food. Below is an example of jiggly cheesecake created by the Japanese.</p>
+<img src="jigglycheesecake.jpg" height="300"/>
+<p>http://static6.businessinsider.com/image/571a7e2b8e91c6912732d822/we-cant-stop-watching-these-jiggling-cheesecakes-from-japan.jpg</p>
+<p>http://www.lgl.lt/en/files/japan-flag-356x241.gif</p>
+<p>https://img.clipartxtras.com/c7a15886667f3f4727068057ae3d3dd8_png-globe-clipart-transparent-background_2070-2062.png</p>
+
+
+
+

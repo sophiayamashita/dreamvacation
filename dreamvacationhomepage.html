@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="globe.png" />
+	  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lobster">
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+	<title>DreamVacation</title>
+<style>
+p {
+font-family: 'Dosis', serif;
+        font-size: 15px;
+        }
+h2 {
+font-family: 'Lobster', serif;
+        font-size: 45px;
+        }
+h4 {
+font-family: 'Lobster', serif;
+        font-size: 32px;
+        }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #929ea0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right:1px solid #e6c6ff;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) { 
+    background-color: #e6c6ff;
+}
+.active {
+	background-color: #B0E0E6
+</style>
+</head>
+
+<body>
+
+<ul>
+  <li><a class="active" href="#dreamvacationhomepage">Home</a></li>
+  <li><a href="Korea.html">Korea</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a href="Italy.html">Italy</a></li>
+  <li><a href="Africa.html">Africa</a></li>
+  
+</ul>
+
+
+<div style="padding:20px;margin-top:30px;background-color:#fdf2ff;height:1500px;">
+<h2>Dream Vacations</h1>
+<div id="googleMap" style="width:100%;height:500px;"></div>
+<script>
+function myMap() {
+
+var mapCenter = new google.maps.LatLng(30.1037791,83.1626762);
+var mapProp= {
+    center:mapCenter,
+    zoom:2,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+var Korea =new google.maps.LatLng(35.7444164,123.3823246);
+
+var Japan =new google.maps.LatLng(34.6873153,135.5233246);
+
+var Italy =new google.maps.LatLng(41.8902,12.4922);
+
+var Africa = new google.maps.LatLng(-22.3285,24.6849);
+
+var KoreaMarker = new google.maps.Marker({position: Korea});
+KoreaMarker.setMap(map);
+var JapanMarker = new google.maps.Marker({position: Japan});
+JapanMarker.setMap(map);
+var ItalyMarker = new google.maps.Marker({position: Italy});
+ItalyMarker.setMap(map);
+var AfricaMarker = new google.maps.Marker({position: Africa});
+AfricaMarker.setMap(map);
+
+var myTrip = [Korea, Japan, Italy, Africa];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2,
+ 
+
+});
+flightPath.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+
+
+<p> This website will include 4 different places where I would like my dream vacation to be!</p>
+<h4>Korea</h4>
+
+<p>South Korea is a country in East Asia with the capital being Seoul.</p>
+<p>The reasons I would like to go there are for the innovative products that they've made!</p>
+<p>I'd also be able to see where my mom grew up for a portion of her life which is really cool.</p>
+<h4>Japan</h4>
+<p>Another place I would like to go to is Japan.</p>
+<p>I've seen a lot of videos of their street foods and their food in general and it's really interesting.</p>
+<p>It would also be exciting to see their famous mountains!</p>
+
+<h4>Italy</h4>
+<p>Also known as the boot country!</p>
+<p>It has many different tourist attractions dating back from the 14th century.</p>
+<h4>Africa</h4>
+<p>The worlds second largest continent...wow</p>
+<p>It is filled with all kinds of animals that you don't normally see here!</p>
+<p>You can go on safari's and experience everything for yourself.</p>
+<p>https://img.clipartxtras.com/c7a15886667f3f4727068057ae3d3dd8_png-globe-clipart-transparent-background_2070-2062.png</p>
+</div>
+
+</body>
+</html>
+

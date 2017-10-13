@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="globe.png" />
+	  <link rel="stylesheet"
+       <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Lobster">
+         <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+<style>
+p {
+font-family: 'Dosis', serif;
+        font-size: 15px;
+        }
+h1 {
+font-family: 'Lobster', serif;
+        font-size: 45px;
+        }
+h4 {
+font-family: 'Lobster', serif;
+        font-size: 32px;
+        }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #929ea0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right:1px solid #e6c6ff;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) { 
+    background-color: #e6c6ff;
+}
+.active {
+	background-color: #B0E0E6
+</style>
+</head>
+<body>
+
+<ul>
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Korea.html">Korea</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a href="Italy.html">Italy</a></li>
+  <li><a class="active" href="#Africa">Africa</a></li>
+</ul>
+<div style="padding:20px;margin-top:30px;background-color:#FFFAF0;">
+<h1> Africa</h1>
+
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+<h2>Description</h2>
+<p>Africa is the second most populated continent, with it's largest country being Algeria.</p>
+<p>Also Botswana is one of the best countries to go to in Africa for a safari.</p>
+
+<img src="safari.jpg" height="300"/>
+<div id="googleMap2" style="width:100%;height:500px;"></div>
+
+
+<script>
+function myMap() {
+var mapCenter = new google.maps.LatLng(-26.3285,22.6849);
+var mapProp= {center:mapCenter,zoom:4};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var Africa =new google.maps.LatLng(-26.3285,22.6849);
+var AfricaMarker= new google.maps.Marker({position: Africa});
+AfricaMarker.setMap(map);
+
+var mapCenter2 = new google.maps.LatLng(-8.783195,34.5063343);
+var mapProp2= {center:mapCenter2,zoom:3};
+var map2=new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+
+var Africa2 =new google.maps.LatLng(-4.783195,26.5063343);
+var Africa2Marker= new google.maps.Marker({position: Africa2});
+map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+Africa2Marker.setMap(map2);
+var circle = new google.maps.Circle({
+  center:mapCenter,
+  radius:200000,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2,
+  fillColor:"#0000FF",
+  fillOpacity:0.4
+});
+circle.setMap(map);
+var infowindow = new google.maps.InfoWindow({
+  content:"Botswana!"
+  });
+infowindow.open(googleMap,AfricaMarker);
+
+var marker=new google.maps.Marker({
+  position:Africa2,
+  icon:'Africaflag.png'
+  });
+
+marker.setMap(map2);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEZvZhIKGAkiFtJFFd1fJw3iCKMCEu1s&callback=myMap"></script>
+<h2> Reasons why I want to go to Africa</h2>
+<p>They have so much wild life that you can see, so going on a safari would be really interesting.</p>
+<p>Also to just be able to explore, taste different foods, learn about their lifestyle, and so much more.</p>
+<p>https://www.zicasso.com/sites/default/files/styles/image_style_tours_grid/public/photos/tour/africa_kenya_masai_mara_leopard_with_safari_cars_2.jpg</p>
+<p>https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/2000px-Flag_of_South_Africa.svg.png</p>
+<p>https://img.clipartxtras.com/c7a15886667f3f4727068057ae3d3dd8_png-globe-clipart-transparent-background_2070-2062.png</p>
+
+
+
+

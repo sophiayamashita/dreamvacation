@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="globe.png" />
+	  <link rel="stylesheet"
+<link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Lobster">
+         <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+<style>
+p {
+font-family: 'Dosis', serif;
+        font-size: 15px;
+        }
+h1 {
+font-family: 'Lobster', serif;
+        font-size: 45px;
+        }
+h4 {
+font-family: 'Lobster', serif;
+        font-size: 32px;
+        }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #929ea0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right:1px solid #e6c6ff;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) { 
+    background-color: #e6c6ff;
+}
+.active {
+	background-color: #B0E0E6
+</style>
+</head>
+<body>
+
+<ul>
+
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="#Korea">Korea</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a href="Italy.html">Italy</a></li>
+  <li><a href="Africa.html">Africa</a></li>
+ 
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#FFFAF0;">
+<h1>Korea</h1>
+korea 
+
+
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+<script>
+function myMap() {
+var mapCenter = new google.maps.LatLng(35.7444164,123.3823246);
+var mapProp= {center:mapCenter,zoom:5};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var Korea =new google.maps.LatLng(37.4647689,127.0093638);
+var KoreaMarker = new google.maps.Marker({position: Korea});
+KoreaMarker.setMap(map);
+
+var marker=new google.maps.Marker({
+  position:Korea,
+  icon:'southkoreaflag.png'
+  });
+
+marker.setMap(map);
+
+//map2
+
+var mapCenter2 = new google.maps.LatLng(37.5511683,126.9882961);
+var mapProp= {center:mapCenter2,zoom:15};
+var map=new google.maps.Map(document.getElementById("googleMap2"),mapProp);
+var Korea2 =new google.maps.LatLng(37.5511683,126.9882961);
+var Korea2Marker = new google.maps.Marker({position: Korea2});
+map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+Korea2Marker.setMap(map);
+var infowindow = new google.maps.InfoWindow({
+  content:"N Seoul Tower!"
+  });
+infowindow.open(googleMap2,Korea2Marker);
+
+}
+</script>
+<h2> Description</h2>
+<p>Korea has one of the best education systems in the world! Surpassing America by a lot.</p>
+<p>Aside from that they have amazing food such as; tofu soup, bulgogi, galbi. Along with popular deserts such as 16,000 strings of honey also known as Dragon's beard candy here in America.</p>
+<img src="koreanfood.jpg" height="300"/>
+<h2> Reasons why I want to go to Korea </h2>
+<p> My mom grew up in Korea for the first 11-12 years of her life before moving to America. She grew up in Seoul with her mom, dad, sister, and brother.</p>
+<p> It has been over twenty years since she's been back but wishes to go soon. As soon as the drama with North Korea settles down we will probably go with our family!</p>
+<p> Other than the food this is one of the main reasons why I would like to go 👍🏻 </p>
+<div id="googleMap2" style="width:100%;height:500px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEZvZhIKGAkiFtJFFd1fJw3iCKMCEu1s&callback=myMap"></script>
+
+<p> It is the second tallest point in South Korea at 236 meters. The tower is Korea's first radio wave tower first opened in 1980.
+<p>https://i.hungrygowhere.com/business/32/71/12/00/i-m-kim-korean-bbq-concept-shot-2_800x0_crop_800x800_e3a9b7020f.jpg</p>
+<p>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_South_Korea.png/1024px-Flag_of_South_Korea.png</p>
+<p>https://img.clipartxtras.com/c7a15886667f3f4727068057ae3d3dd8_png-globe-clipart-transparent-background_2070-2062.png</p>
+</div>
+
+</body>
+</html>
